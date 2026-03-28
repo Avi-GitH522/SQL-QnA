@@ -15,7 +15,7 @@ from patients
 SELECT
 	patient_id, weight, height,
     CASE
-    	WHEN weight / POWER(height/100.0, 2) >= 30 THEN 1
+    	WHEN weight / POWER(height/100.0, 2) >= 30 THEN 1   -- 100.0 is important, only 100 will not work! --
         ELSE 0
     END as isObese
 FROM patients
